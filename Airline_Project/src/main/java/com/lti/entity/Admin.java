@@ -25,6 +25,51 @@ public class Admin {
 	
 	@OneToMany(mappedBy = "admin")
 	private List<Flight> flights;
+
+	public Admin() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getAdminId() {
+		return adminId;
+	}
+
+	public void setAdminId(int adminId) {
+		this.adminId = adminId;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public List<Flight> getFlights() {
+		return flights;
+	}
+
+	public void setFlights(List<Flight> flights) {
+		this.flights = flights;
+	}
+
+	public Admin(int adminId, String email, String password, List<Flight> flights) {
+		super();
+		this.adminId = adminId;
+		this.email = email;
+		this.password = password;
+		this.flights = flights;
+	}
 	
 
 	
